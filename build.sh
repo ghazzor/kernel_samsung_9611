@@ -29,7 +29,7 @@ LLVM_NM='${LLVM_DIR}/llvm-nm'
 
 make clean && make distclean
 clear
-make ${ARGS} KCFLAGS=-w CONFIG_SECTION_MISMATCH_WARN_ONLY=y m21_defconfig
+make ${ARGS} KCFLAGS=-w CONFIG_SECTION_MISMATCH_WARN_ONLY=y m21_defconfig naz.config
 make ${ARGS} KCFLAGS=-w CONFIG_SECTION_MISMATCH_WARN_ONLY=y -j$(nproc)
 
 
