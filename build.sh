@@ -1,20 +1,7 @@
-export PATH=$PWD/toolchain/bin:$PATH
+PATH=$PWD/toolchain/bin:$PATH
 export LLVM_DIR=$PWD/toolchain/bin
 export CC=clang
 export LD=ld.lld
-export CROSS_COMPILE='${LLVM_DIR}/aarch64-linux-gnu-'
-export CROSS_COMPILE_ARM32='${LLVM_DIR}/arm-linux-gnueabi-'
-export CLANG_TRIPLE='${LLVM_DIR}/aarch64-linux-gnu-'
-export AR='${LLVM_DIR}/llvm-ar'
-export NM='${LLVM_DIR}/llvm-nm'
-export OBJCOPY='${LLVM_DIR}/llvm-objcopy'
-export OBJDUMP='${LLVM_DIR}/llvm-objdump'
-export READELF='${LLVM_DIR}/llvm-readelf'
-export OBJSIZE='${LLVM_DIR}/llvm-size'
-export STRIP='${LLVM_DIR}/llvm-strip'
-export LLVM_AR='${LLVM_DIR}/llvm-ar'
-export LLVM_DIS='${LLVM_DIR}/llvm-dis'
-export LLVM_NM='${LLVM_DIR}/llvm-nm'
 
 
 export ARCH=arm64
@@ -25,9 +12,9 @@ ARGS='
 CC=clang
 LD=ld.lld
 ARCH=arm64
-CROSS_COMPILE='${LLVM_DIR}/aarch64-linux-gnu-'
-CROSS_COMPILE_ARM32='${LLVM_DIR}/arm-linux-gnueabi-'
-CLANG_TRIPLE='${LLVM_DIR}/aarch64-linux-gnu-'
+CROSS_COMPILE=aarch64-linux-gnu-
+CROSS_COMPILE_ARM32=arm-linux-gnueabi-
+CLANG_TRIPLE=aarch64-linux-gnu-
 AR='${LLVM_DIR}/llvm-ar'
 NM='${LLVM_DIR}/llvm-nm'
 OBJCOPY='${LLVM_DIR}/llvm-objcopy'
