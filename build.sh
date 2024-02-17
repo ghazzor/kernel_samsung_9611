@@ -1,9 +1,10 @@
-#!/bin/bash
-
 export PATH=$PATH/toolchain/bin:$PATH
 export LLVM_DIR=$PATH/toolchain/bin
 export CC=clang
 export LD=ld.lld
+export CROSS_COMPILE='$PWD/toolchain/proton-clang/bin/aarch64-linux-gnu-'
+export CROSS_COMPILE_ARM32='$PWD/toolchain/proton-clang/bin/arm-linux-gnueabi-'
+export CLANG_TRIPLE='$PWD/toolchain/proton-clang/bin/aarch64-linux-gnu-'
 export AR=${LLVM_DIR}/llvm-ar
 export NM=${LLVM_DIR}/llvm-nm
 export OBJCOPY=${LLVM_DIR}/llvm-objcopy
@@ -24,9 +25,9 @@ ARGS='
 CC=clang
 LD=ld.lld
 ARCH=arm64
-CROSS_COMPILE=aarch64-linux-gnu-
-CROSS_COMPILE_ARM32=arm-linux-gnueabi-
-CLANG_TRIPLE=aarch64-linux-gnu-
+CROSS_COMPILE='$PWD/toolchain/proton-clang/bin/aarch64-linux-gnu-'
+CROSS_COMPILE_ARM32='$PWD/toolchain/proton-clang/bin/arm-linux-gnueabi-'
+CLANG_TRIPLE='$PWD/toolchain/proton-clang/bin/aarch64-linux-gnu-'
 AR='${LLVM_DIR}/llvm-ar'
 NM='${LLVM_DIR}/llvm-nm'
 OBJCOPY='${LLVM_DIR}/llvm-objcopy'
